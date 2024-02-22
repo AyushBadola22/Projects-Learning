@@ -26,4 +26,7 @@
 <p><img align="center" src="https://github-readme-streak-stats.herokuapp.com/?user=ayushbadola22&" alt="ayushbadola22" /></p>
 
 
+# Basic Projects
+[Pet the Cat](https://ayushbadola22.github.io/Projects-Learning/Pet%20the%20cat/index.html)
+
 
