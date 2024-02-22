@@ -1,9 +1,11 @@
 # Projects-Learning
 
-
-<img align = "right" alt = "Coding" width = "400" src = "https://www.google.com/url?sa=i&url=https%3A%2F%2Fexchange.art%2Fsingle%2F4fSUy1ar4sFWNndLrHDFshbjrSNxNtYno7tuisY4eMTk&psig=AOvVaw2XXfQ3iyjXVTuAzwCHvTzB&ust=1708702714752000&source=images&cd=vfe&opi=89978449&ved=0CBIQjRxqFwoTCJiNndekv4QDFQAAAAAdAAAAABAI">
 <h1 align="center">Hi 👋, I'm Ayush Badola</h1>
 <h3 align="center">A passionate developer from India</h3>
+
+<img align="left" alt="Coding" width="200" src="https://media.licdn.com/dms/image/D4D22AQEhShMqA7bPkA/feedshare-shrink_800/0/1683890056704?e=1711584000&v=beta&t=3wI4_xd2vqz0Lh4-CuNU7y2Mz4dQLKtAipojSbUyrc4">
+
+
 
 - 🌱 I’m currently learning **Full stack development.**
 
