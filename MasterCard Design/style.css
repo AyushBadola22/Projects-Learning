@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Titillium Web" ;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    background-image: url("https://images.pexels.com/photos/3745234/pexels-photo-3745234.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-repeat: no-repeat;
+    background-size: cover;
+    filter: contrast(2);
+}
+
+section{
+    position: relative;
+    background: rgb(11, 13, 20);
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+section::before{
+    content: "";
+    position: relative;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom right , purple , white);
+    transform: translate(50% , -50%);
+}
+
+section::after{
+    content: "";
+    position: relative;
+    height: 240px;
+    width: 240px;
+    border-radius: 50%;
+    background: linear-gradient(to top left , purple , white);
+    transform: translate(-50% , 50%);
+}
+.container{
+    position: relative; 
+    height: 250px;
+    width: 475px;
+    z-index: 100;
+}
+
+.container .card{
+
+    height: 100%;
+    width: 100%;
+    border-radius: 25px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(21, 20, 20, 0.128);
+    backdrop-filter: blur(10px);
+}
+
+.front-face .logo img{
+    width: 50px;    
+    height: 50px;
+    object-fit: cover;
+    overflow: visible;
+    margin-right: 30px;
+}
+
+h1{
+    color: white;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+}
+.front-face .logo {
+    display: flex;
+    padding-left: 40px;
+    padding-top: 30px;
+}
+
+.front-face .card-details {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+
+.card-details .name-number{
+    margin-top: 20px;
+    margin-left: 30px;
+}
+
+.card-details .name-number h6{
+    font-weight: 400;
+    font-size: 10px;   
+}
+
+.card-details .name-number .number{
+    font-size: 25px;
+    margin-top: -5px;
+}
+
+
+.card-details .name-number .name{
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.validity{
+    margin-right: 20px;
+}
+.validity h5{
+    margin-top: -5px;
+    font-size: 20px;
+}
+.validity h6{
+    font-size: 10px;
+
+}
