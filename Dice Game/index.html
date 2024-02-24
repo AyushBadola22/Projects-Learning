@@ -1,3 +1,8 @@
+<!-- 
+    TODO: Add a rename feature , add a scorecard , play again btn ,  
+ -->
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,22 +10,62 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dice Challenge</title>
 
-<!-- Fonts  -->
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Teko:wght@300..700&display=swap" rel="stylesheet">
-
-<!-- Fonts -->
     <link rel="stylesheet" href="style.css">
     
 
 </head>
 <body>
-    <header><h1> Welcome to the mini game </h1></header>
-    
-    <div id="main">
-        <h1>Rules : Randomly generates number for the players and the player with teh greater number wins</h1>
-    </div>
-</body>
+    <header>
+        <nav>
+            <h1>Mini Game 1</h1>
+            <h1>Project Starting time : 8:28 pm </h1>
+            <h1>Project End time : 1:46 am </h1>
+        </nav>
+    </header>
+
+    <h1 class="title">Unparalled Luck</h1>
+
+    <section class = "game-instructions">
+        <p id = "instructions"> Let's see can you rival the luck of mighty Priyanshu.  Player clicks the dice to get a random number , another player have to roll a greater number than the first player to <b id = "win">win</b>, else he <b id = "loses">loses</b>. </h2>
+        <h1 id = "tap">Tap the <b>dice </b>to play</p>
+    </section>
+
+    <h1 id = "winner"> The match has not started </h1>
+    <article id = "btn"><button id = "play-again" onclick="playAgain()"> Restart</button></article>
+
+
+    <section class = "game">
+        <article id="player1" class = "player">
+            <h1 id = "p1name">Player 1 </h1>
+            
+            <img id = "player1-dice" class = "clickables" src="rollingDice.png" alt="rolling dice" onclick="rollTheDice('player1')" >
+        </article>
+
+        <article id="player2" class = "player">
+            <h1 id = "p2name">Player 2 </h1> 
+            
+            <img id = "player2-dice" class = "clickables" src="rollingDice.png" alt="rolling dice" onclick="rollTheDice('player2')">
+        </article>
+    </section>
+
+    <footer>
+        <section>Thank you for playing this game . Contact me on X(Twitter) , GitHub or Instagram
+            <article>
+                <a class = "icon" href="https://youtu.be/0tOXxuLcaog?feature=shared"><i class="ri-twitter-x-fill"></i></a>
+                
+                <a href="https://youtu.be/0tOXxuLcaog?feature=shared" class = "icon" ><i class="ri-instagram-line"></i></a>
+
+                <a href="https://youtu.be/0tOXxuLcaog?feature=shared" class = "icon" ><i class="ri-github-line"></i></a>
+                
+            </article>
+        </section>
+    </footer>
+    <script src="script.js"></script>
+    </body>
 </html>
+
