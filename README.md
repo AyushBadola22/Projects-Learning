@@ -31,3 +31,5 @@
 
 [Master Card Dsign](https://ayushbadola22.github.io/Projects-Learning/MasterCard%20Design/index.html)
 
+[Unparalleled Luck](https://ayushbadola22.github.io/Projects-Learning/Dice%20Game/index.html)
+
