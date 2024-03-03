@@ -27,9 +27,11 @@
 
 
 # Basic Projects
-[Pet the Cat](https://ayushbadola22.github.io/Projects-Learning/Pet%20the%20cat/index.html)
+[Pet the Cat](https://ayushbadola22.github.io/Projects-Learning/0.%20Pet%20the%20cat/index.html)
 
-[Master Card Dsign](https://ayushbadola22.github.io/Projects-Learning/MasterCard%20Design/index.html)
+[Master Card Dsign](https://ayushbadola22.github.io/Projects-Learning/2.%20MasterCard%20Design/index.html)
 
 [Unparalleled Luck](https://ayushbadola22.github.io/Projects-Learning/1.%20Dice%20Game/index.html)
+
+[Drum Kit ](https://ayushbadola22.github.io/Projects-Learning/3.%20Drum%20Kit/index.html)
 
