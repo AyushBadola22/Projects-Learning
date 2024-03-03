@@ -1,0 +1,79 @@
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Source Sans 3", sans-serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background: rgb(91, 89, 89);
+}
+::-webkit-scrollbar{
+    width: 0px;
+    background-color: transparent;
+}
+
+/***********************************
+Nav Bar
+************************************/
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: black;
+    color: yellow;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+    padding: 10px 30px;
+}    
+
+.drum-kit{
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.drum-button {
+    margin-top: 50px;
+    font-size: 75px;
+    padding: 10px 40px;
+    border-radius: 25px;
+    box-shadow: 0px 0px 12px black;
+}
+
+footer p{
+    display: flex;
+    justify-content: center;
+    background: black;
+    color: yellow;
+    padding: 8px ;
+    text-align: center;
+    font-weight: bold;
+}
+
+#instruction{
+    color: yellow;
+    text-align: center;
+    font-size: 25px;
+    font-weight: 800;
+    text-shadow: 0px 1px 8px black;
+    margin-bottom: 40px ;
+}
+
+.active{
+    background: black;
+    color: yellow;
+    box-shadow: 0px 0px 8px yellow;
+}
+
+.drum-button:hover{
+    border: transparent;
+    box-shadow: 0px 1px 12px yellow;
+}
