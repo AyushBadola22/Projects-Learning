@@ -33,5 +33,5 @@
 
 [Unparalleled Luck](https://ayushbadola22.github.io/Projects-Learning/1.%20Dice%20Game/index.html)
 
-[Drum Kit ](https://ayushbadola22.github.io/Projects-Learning/3.%20Drum%20Kit/index.html)
+[🥁 Unleash the Rhythm!  ](https://ayushbadola22.github.io/Projects-Learning/3.%20Drum%20Kit/index.html)
 
