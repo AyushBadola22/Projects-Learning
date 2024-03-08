@@ -35,13 +35,13 @@ nav{
 .nav-part1{
     display: flex;
     align-items: center;
-    font-size: 3vw;
     color: white;
     gap: 1.5vw;
 }
 .nav-part1 a {
     text-decoration: none;
     color: white;
+    font-size: 3vw;
 }
  
 nav .centre{
@@ -91,17 +91,33 @@ nav .project h1 {
     width: 100%;
 }
 
-.game  .current-level {
+.game .highest-score{
+    display: flex;
+    justify-content: center;
+}
+.game .highest-score h2{
     margin-top: 5vw;
+    font-family: "Press Start 2p";
+    font-size: 2vw;
+    color: white;
+    text-shadow: 0 2px 0.3vw black;
+    background: orangered;
+    padding: 0.8vw 2vw;
+    border-radius: 5vw;
+}
+.game .score-points{
+    margin-top: 4vw;
+    font-family: "Press Start 2p";
+    text-align: center;
+    font-size: 1.5vw;
+}
+.game  .current-level {
+    margin-top: 3vw;
     color: peachpuff;
     font-family: "Press Start 2p";
     text-align: center;
-    font-size: 4vw;
+    font-size: 3.5vw;
     text-shadow: 0 0.8vw 2px black;
-}
-
-.container{
-    margin-top: 3vw;
 }
 .tiles{
     margin-top: 4vw;
@@ -136,16 +152,22 @@ nav .project h1 {
 
 footer{
     margin-top: 10vw;
-    box-shadow: -1vw 0 1vw rgba(0, 0, 255, 0.509);
     height: auto;
 }
 
 footer p{
-    background: black;
+    height: auto;
     color: white;
     font-size: 3vh;
     padding: 1vw 5vw;
     text-align: center;
+}
+aside{
+    color: wheat;
+}
+
+::-webkit-scrollbar{
+    width: 0px;
 }
 
 @media (max-width : 1080px) {
@@ -158,20 +180,19 @@ footer p{
         height: 10vw;
         padding: 8vw ;
     }
+    .nav-part1 a{
+        font-size: 7vw;
+    }
     .project{
         display: none;
     }   
     .nav-part1{
         font-size: 5vw;
     }
-    
     #heading h1{
-        padding: 1vw 3vw;
-        border-radius: 5vw;
-        font-size: 3vh;
-        
+        font-size: 5vw;
+        padding: 0.5vw 1.2vw;
     }
-
     .title {
         margin-top: 8vw;
         padding: 3vw 5vw;
@@ -181,10 +202,20 @@ footer p{
     .title .comma{
         font-size: 6vw;
     }
+    .game .highest-score h2{
+        margin-top: 5vw;
+        font-size: 5vw;
+    }
+    .game .score-points{
+        margin-top: 8vw;
+        font-size: 4vw;
+        letter-spacing: -0.1vw;
+    }
     .game  .current-level{
         font-size: 8vw;
         margin-top: 10vw;
         margin-bottom: 10vw;
+        line-height: 10vw;
     }
 
     .container{
@@ -206,12 +237,15 @@ footer p{
     }
 
     footer{
-        margin-top: 10vw;
+        display: flex;
+        align-items: end;
+        margin-top: 15vw;
         height: auto;
     }
     
     footer p{
-        font-size: 2vh;
+        font-size: 4.5vw;
         text-align: center;
     }
+   
 }
