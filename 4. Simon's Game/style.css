@@ -1,0 +1,124 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Caudex", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(rgb(0, 0, 0)0%, rgba(107, 7, 7, 0.1) 100%), linear-gradient(90deg, #06334d, #30095f);
+  
+}
+
+.main{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 6.5vw;
+    width: 100%;
+    padding: 1vw 5vw;
+    box-shadow:  0px 3px 15px rgba(0, 37, 101, 0.842) ;
+}
+
+.nav-part1{
+    display: flex;
+    font-size: 1.2vw;
+}
+
+.nav-part1 h3{
+    color: white;
+    padding: 0.5vw 1.5vw ;
+    border-radius: 5vw;
+}
+ 
+nav .centre{
+    color: white;
+    background: rgb(0, 5, 159);
+    box-shadow: 0px 1px 12px rgba(0, 189, 252, 0.5);
+    border-radius: 5vw;
+    font-size: 2vw;
+    text-align: center;
+    border:  2px solid blue ;
+    padding: 0.5vw 1.3vw;
+}
+nav h1{
+    font-size: 1.2vw;
+    color: white;
+}
+
+.title {
+    margin-top: 5vw;
+
+    color: white;
+    font-family: "Press Start 2p";
+    padding: 3vw 5vw;
+    font-size: 3vw;
+    text-align: center;
+    line-height: 4vw;
+}
+.title .special-text{
+    font-family: "Press Start 2p";
+    color: rgb(71, 188, 243);
+    text-shadow: 1px 0 2px rgba(34, 0, 255, 0.5), 0 1px 2px rgba(34, 0, 255, 0.5), -1px 0 2px rgba(34, 0, 255, 0.5), 0 -1px 2px rgba(34, 0, 255, 0.5);
+}
+
+.title .comma{
+    font-size: 3vw;
+    font-family: "Press Start 2p";
+    color: lightblue;  
+}
+/*
+    Flex Directions
+    Flex wrap
+    CSS media queries
+    calc(100% - 100px)
+*/
+
+/*
+font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+*/
+
+@media (max-width : 1080px) {
+    nav{
+        height: 10vw;
+        padding: 3vw 5vw;
+    }
+    .nav-part1{
+        font-size: 1.5vw;
+    }
+
+    .nav-part1 h3{
+        border-radius: 5vw;
+    }
+    
+    nav .centre{
+        padding: 0.5vw 1vw ;
+        border-radius: 5vw;
+        font-size: 2.5vw;
+    }
+    nav h1{
+        font-size: 1.5vw;
+    }
+
+    .title {
+        margin-top: 5vw;
+        padding: 3vw 5vw;
+        font-size: 4vw;
+        line-height: 5vw;
+    }  
+    .title .comma{
+        font-size: 4vw;
+    }
+}
