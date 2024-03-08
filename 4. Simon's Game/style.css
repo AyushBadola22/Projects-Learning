@@ -105,8 +105,8 @@ font-family: "Press Start 2P", system-ui;
     .nav-part1{
         font-size: 5vw;
     }
-    nav .centre{
-        padding: 1vw 6vw ;
+    nav .centre h1{
+        padding: 1vw 30vw;
         border-radius: 5vw;
         font-size: 6vw;
     }
