@@ -10,10 +10,9 @@
 
 html, body{
     height: auto;
+    position: absolute;
     width: 100%;
     background: linear-gradient(rgb(0, 0, 0)0%, rgba(107, 7, 7, 0.1) 100%), linear-gradient(90deg, #06334d, #30095f);
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .main{
@@ -137,9 +136,8 @@ nav .project h1 {
 
 footer{
     margin-top: 10vw;
-    box-shadow: -1vw 0 1vw blue;
-    height: 8vh;
-    width: 100%;
+    box-shadow: -1vw 0 1vw rgba(0, 0, 255, 0.509);
+    height: auto;
 }
 
 footer p{
@@ -151,24 +149,27 @@ footer p{
 }
 
 @media (max-width : 1080px) {
+    body{
+        height: auto;
+        width: auto;
+    }
     nav{
         margin-top: 2vw;
         height: 10vw;
         padding: 8vw ;
     }
     .project{
-        visibility: hidden;
+        display: none;
     }   
     .nav-part1{
         font-size: 5vw;
     }
-    nav .centre h1{
-        padding: 1vw 30vw;
+    
+    #heading h1{
+        padding: 1vw 3vw;
         border-radius: 5vw;
-        font-size: 8vw;
-    }
-    nav h1{
-        font-size: 1.5vw;
+        font-size: 3vh;
+        
     }
 
     .title {
@@ -206,13 +207,11 @@ footer p{
 
     footer{
         margin-top: 10vw;
-        height: 8vh;
-        width: 100%;
+        height: auto;
     }
     
     footer p{
         font-size: 2vh;
-        padding: 1vw 5vw;
         text-align: center;
     }
 }
