@@ -35,3 +35,5 @@
 
 [🥁 Unleash the Rhythm!  ](https://ayushbadola22.github.io/Projects-Learning/3.%20Drum%20Kit/index.html)
 
+[Test memorizing power](https://ayushbadola22.github.io/Projects-Learning/4.%20Simon's%20Game/index.html)
+
