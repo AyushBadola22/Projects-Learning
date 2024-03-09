@@ -186,6 +186,7 @@ footer p{
 #btn #restart-button{
     margin-top: 2vw;
     font-size: 3vw;
+    font-family: "Press Start 2p";
     padding: 0.5vw 2vw;
     border-radius: 5vw;
     background: orangered;
@@ -286,7 +287,8 @@ footer p{
     #btn #restart-button{
         margin-top: -5vw;
         margin-bottom: 2vw;
-        font-size: 7vw;
+        font-size: 5vw;
+        padding: 1vw 2vw;
         text-shadow: 0 0 0.6vw black;
     }
 }

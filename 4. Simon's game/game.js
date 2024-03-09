@@ -6,7 +6,8 @@ var currentScore = 0;
 var correctSequence = [];
 var result = true;
 var userSequence = [];
-var bug = 0; 
+var bug = 0;
+
 function generateNumber() {
     return Math.floor(Math.random() * 4);
 }
@@ -15,25 +16,27 @@ function isMobileView() {
     return $(window).width() <= 1080;
 }
 
+// Improved animation function
 function animateTile(key) {
-    $(key).addClass("bot-click");
     const size = isMobileView() ? "32vw" : "16vw";
 
-    $(key).animate({
-        height: size,
-        width: size
-    }, 150, "swing");
-
-    setTimeout(function () {
-        $(key).removeClass("bot-click").animate({
+    $(key)
+        .addClass("bot-click")
+        .animate({
+            height: size,
+            width: size
+        }, 150, "swing", function () {
+            $(this).removeClass("bot-click");
+        })
+        .delay(300)
+        .animate({
             height: isMobileView() ? "30vw" : "15vw",
             width: isMobileView() ? "30vw" : "15vw"
         }, 150, "swing");
-    }, 300);
 }
 
-function callTheSequence(tile) {
-    animateTile("#" + tile);
+
+function playSound(tile) {
     tile = tile.replace("Tile", "");
     var audio = new Audio("sounds/" + tile + ".mp3");
     audio.play();
@@ -46,7 +49,7 @@ $(".tiles").click(function (event) {
         $("div.highest-score").slideDown(800);
         $("h1.score-points").slideDown(700);
         $(".title").slideUp(400);
-        bug = 1; 
+        bug = 1;
         game();
     } else {
         takeUserInput(event.target.id);
@@ -55,26 +58,24 @@ $(".tiles").click(function (event) {
 
 function takeUserInput(key) {
     userSequence.push(key);
-    callTheSequence(key);
+    animateTile("#" + key);
+    let lastIndex = userSequence.length - 1;
 
-    let lastIndex = userSequence.length -1; 
-    if(userSequence[lastIndex] != correctSequence[lastIndex]){
-        result = false; 
-        gameOver(); 
-        return; 
+    if (userSequence[lastIndex] !== correctSequence[lastIndex]) {
+        result = false;
+        new Audio("sounds/wrong.mp3").play(); 
+        gameOver();
+        return;
+    }else {
+        playSound(key);
     }
 
     if (userSequence.length === correctSequence.length) {
+        currentScore += correctSequence.length;
+        updateScoreAndLevel();
         setTimeout(function () {
             userSequence = [];
             currentLevel++;
-            currentScore += correctSequence.length; 
-            $("h1.current-level").text("Level : " + currentLevel);
-            $("h1.score-points").text("Score :  "+currentScore+"pts")
-            if(highestScore < currentScore){
-                highestScore = currentScore; 
-                $(".highest-score h2").text("Highest Score : "+highestScore); 
-            }
             game();
         }, 1000);
     }
@@ -83,9 +84,21 @@ function takeUserInput(key) {
 function botTurn() {
     let currentTurn = totalTiles[generateNumber()];
     correctSequence.push(currentTurn);
+
     setTimeout(function () {
-        callTheSequence(currentTurn);
+        animateTile("#" + currentTurn);
+        playSound(currentTurn);
     }, 600);
+}
+
+function updateScoreAndLevel() {
+    $("h1.current-level").text("Level : " + currentLevel);
+    $("h1.score-points").text("Score : " + currentScore + "pts");
+
+    if (highestScore < currentScore) {
+        highestScore = currentScore;
+        $(".highest-score h2").text("Highest Score : " + highestScore);
+    }
 }
 
 function game() {
@@ -93,16 +106,14 @@ function game() {
     botTurn();
 }
 
-
 function restart() {
     currentScore = 0;
     $("h1.score-points").text("Score: " + currentScore + "pts");
-    $("div.highest-score").slideDown(800);
-    $("h1.score-points").slideDown(700);
-    $("h1.current-level").text("Level : "+currentLevel);
+    $("div.highest-score, h1.score-points").slideDown(700);
+    $("h1.current-level").text("Level : " + currentLevel);
     $("#restart-button").css("display", "none");
     $(".title").slideUp(400);
-    started = false; // Assuming you want to reset the game state
+    started = false; // Reset the game state
     game(); // Restart the game
 }
 
@@ -112,10 +123,10 @@ function gameOver() {
     currentLevel = 1;
     userSequence = [];
     correctSequence = [];
-    $("h1.score-points").text("Final Score : " + currentScore+ "pts");
+    $("h1.score-points").text("Final Score : " + currentScore + "pts");
     $(".title").slideDown(400);
     $("#restart-button").css("display", "inline");
 }
 
-// Assuming you have a restart button with id "restart-button"
+// Event handler for restart button click
 $("#restart-button").click(restart);
