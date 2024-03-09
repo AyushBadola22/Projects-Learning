@@ -12,7 +12,8 @@ html, body{
     height: auto;
     position: absolute;
     width: 100%;
-    background: linear-gradient(rgb(0, 0, 0)0%, rgba(107, 7, 7, 0.1) 100%), linear-gradient(90deg, #06334d, #30095f);
+    background-image: linear-gradient(rgb(0, 0, 0)0%, rgba(107, 7, 7, 0.1) 100%), linear-gradient(90deg, #06334d, #30095f);
+    background-size: cover  ;
 }
 
 .bot-click{
@@ -27,7 +28,7 @@ html, body{
 }
 
 .main{
-    height: auto;
+    min-height: 80vh;;
     width: 100%;
     position: relative;
 }
