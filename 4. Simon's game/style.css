@@ -15,8 +15,19 @@ html, body{
     background: linear-gradient(rgb(0, 0, 0)0%, rgba(107, 7, 7, 0.1) 100%), linear-gradient(90deg, #06334d, #30095f);
 }
 
+.bot-click{
+    background: white !important;
+    opacity: 0.65;
+    box-shadow : 0 0 5vw orange;
+}
+
+.wrong-click{
+    background: red !important;
+    box-shadow: 0 0 5vw red;
+}
+
 .main{
-    height: 100%;
+    height: auto;
     width: 100%;
     position: relative;
 }
@@ -92,10 +103,11 @@ nav .project h1 {
 }
 
 .game .highest-score{
-    display: flex;
-    justify-content: center;
+    text-align: center;
+    display: none;
 }
 .game .highest-score h2{
+    display: inline-block;
     margin-top: 5vw;
     font-family: "Press Start 2p";
     font-size: 2vw;
@@ -110,6 +122,7 @@ nav .project h1 {
     font-family: "Press Start 2p";
     text-align: center;
     font-size: 1.5vw;
+    display: none;
 }
 .game  .current-level {
     margin-top: 3vw;
@@ -125,6 +138,7 @@ nav .project h1 {
     height: 15vw;
     border-radius: 3vw;
     border: 10px solid black;
+    
 }
 
 .top{
@@ -147,7 +161,7 @@ nav .project h1 {
     background: yellow;
 }
 #blueTile{
-    background: blue;
+    background: rgb(85, 117, 255);
 }
 
 footer{
@@ -162,8 +176,29 @@ footer p{
     padding: 1vw 5vw;
     text-align: center;
 }
-aside{
-    color: wheat;
+
+#btn{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+#btn #restart-button{
+    margin-top: 2vw;
+    font-size: 3vw;
+    padding: 0.5vw 2vw;
+    border-radius: 5vw;
+    background: orangered;
+    color: white;
+    text-shadow: 0 0 0.1vw black;
+    display: none;
+}
+#restart-button:hover{
+    opacity: 0.85;
+    cursor: pointer;
+}
+#restart-button:active{
+    opacity: 0.35;
 }
 
 ::-webkit-scrollbar{
@@ -203,11 +238,11 @@ aside{
         font-size: 6vw;
     }
     .game .highest-score h2{
+        text-align: center;
         margin-top: 5vw;
-        font-size: 5vw;
+        font-size: 4vw;
     }
     .game .score-points{
-        margin-top: 8vw;
         font-size: 4vw;
         letter-spacing: -0.1vw;
     }
@@ -247,5 +282,11 @@ aside{
         font-size: 4.5vw;
         text-align: center;
     }
-   
+
+    #btn #restart-button{
+        margin-top: -5vw;
+        margin-bottom: 2vw;
+        font-size: 7vw;
+        text-shadow: 0 0 0.6vw black;
+    }
 }

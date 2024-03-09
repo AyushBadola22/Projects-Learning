@@ -23,7 +23,7 @@
     rel="stylesheet"
 />
 <link rel="stylesheet" href="style.css">
-
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <div class="main">
@@ -48,8 +48,9 @@
 
         <div class="game">
             <div class="highest-score"><h2>Highest Score : 0</h2></div>
-            <h1 class = "score-points">Current Score :  0 pts</h1>
-            <h1 class = "current-level">Press A to Start </h1>
+            <h1 class = "current-level">Tap tile to Start </h1>
+            <div id = "btn"> <button id = "restart-button">Restart</button></div>
+            <h1 class = "score-points"> Score :  0 pts</h1>
            
             <div class = "container">
                 <div class="top">
@@ -61,11 +62,13 @@
                     <div id="blueTile" class = "tiles"></div>
                 </div>
             </div>
+            
         </div>
     </div>
     <footer>
         <p>Note : The game does not show the previous sequence , you have to test your memorizing power to remember the past sequence of the tiles as well as new tiles that will added after tapping the correct sequence. 
         </p>
     </footer>
+    <script src="game.js"></script>
 </body>
 </html>
