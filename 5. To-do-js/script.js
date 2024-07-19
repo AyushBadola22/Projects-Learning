@@ -172,6 +172,9 @@ addTaskButton.addEventListener('click', (event) => {
 
 
     let tasks = JSON.parse(localStorage.getItem("tasks"));
+    if(!tasks){
+        localStorage.setItem("tasks", JSON.stringify([]));
+    }
     console.log(tasks);
     let taskExists = false;
 
