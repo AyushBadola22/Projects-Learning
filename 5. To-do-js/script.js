@@ -383,28 +383,6 @@ function getPageList(totalPages, page, maxLength) {
 }
 
 
-// const completeBtnLogic = ({ tasks, i, listElement }) => {
-
-
-  // const ele = listElement.querySelector('.completed-btn');
-    // tasks[i].completed = !tasks[i].completed;
-
-
-    // const msg = tasks[i].completed ? "Completed" : "Incomplete"
-    // listElement.querySelector(".completed-btn").innerHTML = msg;
-
-    // const statusMsg = tasks[i].completed ? "Completed" : "Not complete";
-    // listElement.querySelector('#status').innerHTML = "Status : " + statusMsg;
-
-    // const list = listElement.querySelectorAll('.tsk');
-    // if (tasks[i].completed) {
-    //     for (let ele of list) {
-    //         ele.classList.add('line-through');
-    //     }
-    // }
-    // else {
-    //     for (let ele of list) {
-    //         ele.classList.remove('line-through');
-    //     }
-    // }
-    // localStorage.setItem('tasks', JSON.stringify(tasks));   
+if(!localStorage.getItem('tasks')){
+    localStorage.setItem('tasks', JSON.stringify([])); 
+}
