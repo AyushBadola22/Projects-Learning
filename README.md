@@ -37,4 +37,4 @@
 
 [Test memorizing power](https://ayushbadola22.github.io/Projects-Learning/4.%20Simon's%20game/index.html)
 
-[TO-DONT-APP](https://ayushbadola22.github.io/Projects-Learning/blob/main/5.%20To-do-js/index.html)
+[TO-DONT-APP](https://ayushbadola22.github.io/Projects-Learning/5.%20To-do-js/index.html)
