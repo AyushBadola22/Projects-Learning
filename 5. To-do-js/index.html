@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do App</title>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="icon"
+        href="https://imgs.search.brave.com/P9TNUkRilIc58q1xD3HBXF0AQnUyYYgfyiPiaqLvsm0/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA1LzE0LzU3Lzgx/LzM2MF9GXzUxNDU3/ODE4NV9xekljYnZU/amNaeWpuVnRUZU5P/dGI3S3NWb05NMHlO/Vi5qcGc">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="moving-background">
+    <div class="main-container">
+        <header id="header">
+            <h1 id="heading"> To-Don't Application</h1>
+            <h6 id="subheading">Write what you certainly don't want to do.</h4>
+        </header>
+
+        <div class="btn-group">
+            <button id="show-task-form">Add a new task</button>
+            <button id="clear-all-tasks">Clear all tasks</button>
+        </div>
+
+        <div class="task-tabs">
+            <button class="tab-btn active" data-tab="all">All tasks</button>
+            <button class="tab-btn" data-tab="ongoing">Ongoing</button>
+            <button class="tab-btn" data-tab="due">Due</button>
+            <button class="tab-btn" data-tab="completed">Completed</button>
+        </div>
+
+        <div class="navbar">
+            <div class="entries">
+                Entries
+                <select id="dropdown" onchange="updateTaskPerPage()">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                </select>
+            </div>
+
+            <div>
+                <label >Search</label>
+                <input type="search" autocomplete="off" placeholder="search a task..." id="search" >
+            </div>
+
+        </div>
+        
+        <div class="task-content">
+            <div id="all" class="tab-content active">
+            </div>
+            <div id="ongoing" class="tab-content">
+            </div>
+            <div id="due" class="tab-content">
+            </div>
+            <div id="completed" class="tab-content">
+            </div>
+        </div>
+
+
+        <form id="todo-form" class="hide">
+            <h1 class="h-form">Assign yourself a task 📝</h1>
+            <div class="input-container">
+                <input type="text" class="todo-input" required placeholder="   " autocomplete="off">
+                <div class="input-label">Add what you don't want to do ❌</div>
+            </div>
+            <div class="input-container-2">
+                <div class="description-container">
+                    <textarea class="task-description"
+                        placeholder=" Add a description of the task . . .">description</textarea>
+                </div>
+                <div class="input-container-3">
+                    <div>
+                        <label class="date">Enter due date of task</label>
+                        <input type="date" required name="date" class="date-input">
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="add-btn-form">Add</button>
+                        <button class="cancel-btn-form">Cancel</button>
+                    </div>
+                </div>
+                <div class="error-container">
+                    <h6 id="error-message" class="hide"> Error message</h6>
+                </div>
+            </div>
+        </form>
+
+        <div class="task-container">
+            <ul class="task-list">
+                <h5 class="error-message hide">No task yet. Add a task now ✅</h5>
+            </ul>
+        </div>
+
+
+        <!-- Edit form  -->
+        <!-- <div id="edit-overlay" class="hide">
+            <div id="edit-form" class="modal">
+                <h2 class="modal-title">Edit Task</h2>
+                <div class="input-group">
+                    <input type="text" id="edit-todo-input" required>
+                    <label for="edit-todo-input">Task Title</label>
+                </div>
+                <div class="input-group">
+                    <textarea id="edit-task-description" rows="3" required></textarea>
+                    <label for="edit-task-description">Description</label>
+                </div>
+                <div class="input-group">
+                    <input type="date" id="edit-date-input" required>
+                    <label for="edit-date-input">Due Date</label>
+                </div>
+                <div class="button-group">
+                    <button type="button" id="save-edit-btn" class="btn btn-primary">Save Changes</button>
+                    <button type="button" id="cancel-edit-btn" class="btn btn-secondary">Cancel</button>
+                </div>
+            </div>
+        </div>   -->
+
+    </div>
+
+    <footer>
+        <ul class="pagination">
+            <!--
+             <li> <a class="page-btns previous-btn disable">Previous</a></li>
+            <li> <a class="page-btns  active-pg ">1</a></li>
+            <li> <a class="page-btns pg-num">2</a></li>
+            <li> <a class="page-btns ">3</a></li>
+            <li> <a class="page-btns ">4</a></li>
+            <li> <a class="page-btns next-btn">Next</a></li>
+             -->
+        </ul>
+    </footer>
+
+    <div class="last"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>

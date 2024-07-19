@@ -1,0 +1,890 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    font-family: "Poppins", sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    max-width: 30rem;
+    margin: 0 auto;
+    padding: 1rem;
+    background-color: white;
+}
+
+/* 
+@keyframes moveGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.moving-background {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 35%, rgba(0, 212, 255, 1) 100%);
+    background-size: 200% 200%;
+    animation: moveGradient 15s ease infinite;
+    width: 100%;
+    height: 100vh; 
+} */
+
+
+.main-container {
+    min-width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.green-bg {
+    background: rgb(7, 181, 7) !important;
+    color: white !important;
+    outline: 2px solid white !important;
+    transition: .1s ease-in-out;
+}
+
+.green-bg:hover {
+    background: white;
+    color: rgb(7, 181, 7);  
+    outline: limegreen !important;
+    box-shadow: 0 1px 2px lime;
+}
+
+/* ------------------Heading part ----------------------- */
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+#heading {
+    font-size: clamp(0.5rem, 3vw, 4vw);
+    text-align: center;
+    color: #333;
+    text-transform: uppercase;
+    background: rgb(59 130 246);
+    color: white;
+    border-radius: 0.75rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    margin-bottom: 0.4rem;
+    width: clamp(35vw, 45vw, 50vw);
+}
+
+#subheading {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+/* ------------------Heading part ends----------------------- */
+
+
+/* ------------------ Add tasks ----------------------- */
+
+#todo-form {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    position: fixed;
+    top: 5vw;
+    background: white;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: clamp(40vw, 45vw, 50vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.h-form {
+    color: rgb(59 130 246);
+    margin-bottom: 0.5rem;
+}
+
+.input-container {
+    position: relative;
+    width: 100%;
+    line-height: 80px;
+    margin-top: 0.5rem;
+    margin-bottom: 5rem;
+
+}
+
+.todo-input {
+    position: absolute;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.1rem 0.30rem;
+    border-radius: 0.52rem;
+    border: 2px solid rgb(196, 196, 196);
+    transition: 0.1s ease;
+    background: transparent;
+    z-index: 111;
+}
+
+.input-label {
+    position: absolute;
+    font-size: 0.8rem;
+    color: gray;
+    margin: 0.20px;
+    top: -25px;
+    left: 8px;
+    transition: 0.1s ease;
+}
+
+.todo-input:focus,
+.todo-input:not(:placeholder-shown) {
+    outline: 3px solid deepskyblue;
+    border: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .8rem;
+    padding-bottom: .4rem;
+}
+
+.todo-input:focus+.input-label,
+.todo-input:not(:placeholder-shown)+.input-label {
+    line-height: 10px;
+    transform: translate(0px, 17px) scale(0.88);
+    z-index: 111;
+    color: #000;
+    background: white;
+    padding: 0 0.75rem;
+}
+
+
+.input-container-2 {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    gap: 3rem;
+    margin-top: -1rem;
+    transition: .1s ease-in-out;
+}
+
+.container {
+    width: 75%;
+    height: 100%;
+}
+
+textarea {
+    resize: none;
+    display: flex;
+    width: 100%;
+    height: 6.2vw;
+    width: 100%;
+    padding: 12px 16px;
+    border-radius: 8px;
+    resize: none;
+    outline: none;
+    background-color: transparent;
+    transition: 0.1s ease;
+
+}
+
+textarea:focus {
+    outline: 3px solid deepskyblue;
+    border: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: .8rem;
+    padding-bottom: .4rem;
+}
+
+textarea::-webkit-scrollbar {
+    width: 12px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #07c8f97a;
+    border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background-color: deepskyblue;
+    border-radius: 10px;
+    border: 3px solid #f3f4f6;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+    background-color: blue;
+}
+
+.date {
+    font-size: 0.75rem;
+    color: gray;
+    margin-left: 0.2rem;
+}
+
+.date-input {
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: .5rem;
+    border-width: 2px;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+
+
+.buttons {
+    margin-right: 2rem;
+    margin-left: 0.5rem;
+    margin-top: 1rem;
+}
+
+.add-btn-form {
+    font-size: 1rem;
+    font-weight: bold;
+    background: rgb(59 130 246);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5rem;
+    border: none;
+    margin-right: 1rem;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+
+.cancel-btn-form {
+    font-size: 1rem;
+    font-weight: bold;
+    background: gray;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.add-btn-form:hover,
+.add-btn-form:active {
+    background: white;
+    outline: 2px solid rgb(59 130 246);
+    color: rgb(59 130 246);
+    box-shadow: 0 1px 5px blue;
+    scale: 1.02;
+}
+
+.cancel-btn-form:hover,
+.cancel-btn-form:active {
+    background: white;
+    outline: 2px solid rgb(111, 112, 113);
+    color: gray;
+    box-shadow: 0 1px 5px gray;
+    scale: 1.02;
+}
+
+
+.input-container-3 {
+    margin-top: -0.5vw;
+}
+
+
+/*  Show form button*/
+
+#show-task-form {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background: rgb(59 130 246);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5rem;
+    border: none;
+    margin-right: 1rem;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+
+#show-task-form:hover {
+    background: white;
+    outline: 2px solid rgb(59 130 246);
+    color: rgb(59 130 246);
+    box-shadow: 0 1px 5px blue;
+    scale: 1.02;
+}
+
+#clear-all-tasks {
+    margin-top: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    background: rgb(229, 5, 5);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5rem;
+    border: none;
+    margin-right: 1rem;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+
+#clear-all-tasks:hover {
+    background: white;
+    outline: 2px solid rgb(229, 5, 5);
+    color: rgb(229, 5, 5);
+    box-shadow: 0 1px 5px red;
+    scale: 1.02;
+}
+
+.btn-group {
+    margin-bottom: 1vw;
+}
+
+.hide {
+    visibility: hidden;
+    display: none;
+}
+
+
+#error-message {
+    color: rgb(255, 5, 5);
+}
+
+.error-container {
+    position: absolute;
+    bottom: 5px;
+    margin-bottom: 4px;
+    margin-top: 4px;
+}
+
+.form-active {
+    position: relative;
+}
+
+
+/* Lists styling */
+
+
+.task-container ul {
+    counter-reset: li;
+    list-style: none;
+    padding: 0;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+.task-container ul a,
+.description {
+    position: relative;
+    display: block;
+    padding: .4em 2em .4em 2em;
+    margin: .5em 0;
+    background: white;
+    color: rgb(59 130 246);
+    text-decoration: none;
+    border-radius: .3em;
+    transition: .3s ease-out;
+    border: 2px solid rgb(59 130 246);
+    box-shadow: 0 2px 5px rgba(173, 170, 170, 0.678);
+}
+
+.task-container ul a {
+    font-size: 1.25rem;
+    background: white;
+    color: rgb(18, 63, 135);
+    font-weight: bold;
+}
+
+.task-container ul a:hover,
+.description:hover {
+    background: rgb(59 130 246);
+    color: white;
+}
+
+.task-container ul a:hover:before .description::before {
+    transform: rotate(360deg);
+}
+
+.task-container ul a:before {
+    content: '📃';
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: rgb(59 130 246);
+    color: white;
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+
+.task-container li {
+    margin-bottom: 3vw;
+}
+
+.empty-message {
+    margin-top: 2vw;
+}
+
+/* Title of card */
+
+.completed-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    background: rgb(255, 116, 2);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5rem;
+    border: none;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 1px 2px black;
+
+}
+
+.completed-btn:hover,
+.completed-btn:active {
+    background: white;
+    outline: 2px solid orangered;
+    color: orangered;
+    box-shadow: 0 1px 2px black;
+    scale: 1.02;
+}
+
+.edit-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    background: orange;
+    color: white;
+    padding: 0.2rem 1rem;
+    border-radius: 5rem;
+    border: none;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 1px 2px black;
+
+}
+
+.edit-btn:hover,
+.edit-btn:active {
+    background: white;
+    outline: 2px solid orange;
+    color: orange;
+    box-shadow: 0 1px 5px blue;
+    scale: 1.02;
+}
+
+.delete-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    background: red;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5rem;
+    border: none;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 1px 2px black;
+
+}
+
+.delete-btn:hover,
+.delete-btn:active {
+    background: white;
+    outline: 2px solid red;
+    color: red;
+    box-shadow: 0 1px 5px black;
+    scale: 1.02;
+}
+
+.green-btn {
+    font-size: 1rem;
+    font-weight: bold;
+    background: rgb(1, 185, 1);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5rem;
+    border: none;
+    margin-top: 0.5rem;
+    margin-right: 1rem;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 1px 2px black;
+
+}
+
+.green-btn:hover,
+.green-btn:active {
+    background: white;
+    outline: 2px solid rgb(1, 185, 1);
+    color: rgb(1, 185, 1);
+    box-shadow: 0 1px 5px black;
+    scale: 1.02;
+}
+
+.line-through {
+    text-decoration: line-through rgb(101, 141, 155);
+    text-decoration-thickness: 2px;
+}
+
+
+
+/* **************************************************************************** */
+/* Edit form styles */
+#edit-form {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    position: fixed;
+    top: 5vw;
+    background: white;
+    padding: 25px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    width: clamp(40vw, 45vw, 50vw);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.edit-todo-input {
+    position: absolute;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    padding: 0.1rem 0.30rem;
+    border-radius: 0.52rem;
+    border: 2px solid rgb(196, 196, 196);
+    transition: 0.1s ease;
+    background: transparent;
+    z-index: 111;
+}
+
+.edit-task-description {
+    resize: none;
+    display: flex;
+    width: 100%;
+    height: 6.2vw;
+    padding: 12px 16px;
+    border-radius: 8px;
+    outline: none;
+    background-color: transparent;
+    transition: 0.1s ease;
+}
+
+.edit-date-input {
+    width: 80%;
+    text-align: center;
+    font-size: 1rem;
+    border-radius: .5rem;
+    border-width: 2px;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+
+.save-btn-form {
+    font-size: 1rem;
+    font-weight: bold;
+    background: rgb(59 130 246);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5rem;
+    border: none;
+    margin-right: 1rem;
+    transition: .1s ease-in-out;
+    cursor: pointer;
+}
+
+.cancel-edit-btn-form {
+    font-size: 1rem;
+    font-weight: bold;
+    background: gray;
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.save-btn-form:hover,
+.save-btn-form:active {
+    background: white;
+    outline: 2px solid rgb(59 130 246);
+    color: rgb(59 130 246);
+    box-shadow: 0 1px 5px blue;
+    scale: 1.02;
+}
+
+.cancel-edit-btn-form:hover,
+.cancel-edit-btn-form:active {
+    background: white;
+    outline: 2px solid rgb(111, 112, 113);
+    color: gray;
+    box-shadow: 0 1px 5px gray;
+    scale: 1.02;
+}
+
+
+
+#edit-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#edit-overlay.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+#edit-form {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 500px;
+    transform: scale(0.9);
+    transition: transform 0.3s ease;
+}
+
+#edit-overlay.show #edit-form {
+    transform: scale(1);
+}
+
+.modal-title {
+    margin-bottom: 1.5rem;
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input,
+.input-group textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.input-group label {
+    position: absolute;
+    top: 0.75rem;
+    left: 0.75rem;
+    color: #777;
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.input-group input:focus,
+.input-group textarea:focus,
+.input-group input:not(:placeholder-shown),
+.input-group textarea:not(:placeholder-shown) {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+.input-group input:focus+label,
+.input-group textarea:focus+label,
+.input-group input:not(:placeholder-shown)+label,
+.input-group textarea:not(:placeholder-shown)+label {
+    top: -0.5rem;
+    left: 0.5rem;
+    font-size: 0.75rem;
+    background-color: white;
+    padding: 0 0.25rem;
+}
+
+.button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-primary {
+    background-color: #4a90e2;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3a7bc8;
+}
+
+.btn-secondary {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.btn-secondary:hover {
+    background-color: #e0e0e0;
+}
+
+.task-tabs {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 1vw;
+    background-color: #e9f6ff;
+    border-radius: 30px;
+    padding: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tab-btn {
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.tab-btn.active {
+    background-color: #3498db;
+    color: white;
+}
+
+.tab-btn[data-tab="ongoing"].active {
+    background-color: orange;
+}
+
+.tab-btn[data-tab="due"].active {
+    background-color: #e74c3c;
+}
+
+.tab-btn[data-tab="completed"].active {
+    background-color: #2ecc71;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+    font-size: large;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.page-btns {
+    color: black;
+    background: #e4e5e6;
+    padding: 0.5rem 1rem;
+    border-radius: 5rem;
+}
+
+.previous-btn,
+.next-btn {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.last {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10rem;
+}
+
+.active-pg {
+    background-color: #3b82f6;
+    color: white;
+}
+
+.disable {
+    background: #ccc !important;
+    cursor: default;
+}
+
+.navbar {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.entries {
+    display: flex;
+    gap: 0.2rem;
+    width: auto;
+}
+
+#dropdown{
+    margin-left: 2px;
+    text-align: center;
+    width: 3rem;
+    border-radius: 2rem;
+    border: none;
+    outline: 2px solid #3b82f6;
+}
+
+#search{
+    margin-left: 2px;
+    text-align: left;
+    padding: 0.2rem 0.5rem;
+    border-radius: 2rem;
+    border: none;
+    outline: 2px solid #3b82f6;
+}
